@@ -11,7 +11,7 @@ This project is highly specified on certain android device.
 - DB : Google firebase
 
 ### Youtube link
-[Watch how it work](https://pages.github.com/)
+[Watch how it work](https://youtu.be/qH2rlx7vrIk)
 
 ### Screenshots
 
