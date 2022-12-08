@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drop_pickup_navigation"
+    app:startDestination="@id/startFragment">
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.StartFragment"
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/actionStartFragmentToNewCustomerFragment"
+            app:destination="@id/newCustomerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_startFragment_to_taskBoardFragment"
+            app:destination="@id/taskBoardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_startFragment_to_holdedInvoicesFrg"
+            app:destination="@id/holdedInvoicesFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <argument
+            android:name="customer"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.Customer"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+    </fragment>
+    <fragment
+        android:id="@+id/newCustomerFragment"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.NewCustomerFragment"
+        android:label="fragment_new_customer"
+        tools:layout="@layout/fragment_new_customer" >
+
+<!--        pass arguments by safe args-->
+<!--        ref) https://codelabs.developers.google.com/codelabs/kotlin-android-training-start-external-activity/index.html?index=..%2F..android-kotlin-fundamentals#3-->
+        <argument
+            android:name="phoneNumOrLastName"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/actionNewCustomerFragmentToTaskBoardFragment"
+            app:destination="@id/taskBoardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popUpTo="@id/startFragment" />
+        <action
+            android:id="@+id/action_newCustomerFragment_to_notifyDialogFragment"
+            app:destination="@id/notifyDialogFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskBoardFragment"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.TaskBoardFragment"
+        android:label="TaskBoardFragment" >
+        <argument
+            android:name="customer"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.Customer" />
+        <action
+            android:id="@+id/action_taskBoardFragment_to_makeInvoiceActivity"
+            app:destination="@id/makeInvoiceActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_taskBoardFragment_to_pickupAct"
+            app:destination="@id/pickupAct"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_taskBoardFragment_to_dropoffFrg"
+            app:destination="@id/dropoffFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_taskBoardFragment_to_editCusomerFrg"
+            app:destination="@id/editCusomerFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_taskBoardFragment_to_userInvoiceHistoryFrg"
+            app:destination="@id/userInvoiceHistoryFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <dialog
+        android:id="@+id/notifyDialogFragment"
+        android:name="com.centuryprogrammer18thwasentsingleland.utils.NotifyDialogFragment"
+        android:label="NotifyDialogFragment" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="message"
+            app:argType="string" />
+        <argument android:name="buttonText"
+            app:argType="string"
+            app:nullable="true" />
+    </dialog>
+    <activity
+        android:id="@+id/makeInvoiceActivity"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.MakeInvoiceActivity"
+        android:label="activity_make_invoice"
+        tools:layout="@layout/activity_make_invoice" >
+        <argument
+            android:name="customer"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.Customer" />
+        <argument
+            android:name="invoiceOrder"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.InvoiceOrder"
+            app:nullable="true" />
+    </activity>
+    <activity
+        android:id="@+id/pickupAct"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.pickup.PickupAct"
+        android:label="PickupAct" >
+        <argument
+            android:name="customer"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.Customer" />
+        <argument
+            android:name="invoiceOrders"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.InvoiceOrder[]" />
+        <argument
+            android:name="lastPickupHistroy"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.PickupHistory"
+            app:nullable="true" />
+    </activity>
+    <fragment
+        android:id="@+id/dropoffFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.DropoffFrg"
+        android:label="DropoffFrg" >
+        <argument
+            android:name="customer"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.Customer" />
+        <argument
+            android:name="invoiceOrders"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.InvoiceOrder[]" />
+        <argument
+            android:name="lastPickupHistory"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.PickupHistory"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_dropoffFrg_to_pickupAct"
+            app:destination="@id/pickupAct"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/editCusomerFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.EditCusomerFrg"
+        android:label="EditCusomerFrg" >
+        <argument
+            android:name="customer"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.Customer" />
+    </fragment>
+    <fragment
+        android:id="@+id/userInvoiceHistoryFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.UserInvoiceHistoryFrg"
+        android:label="user_invoice_history_frg"
+        tools:layout="@layout/user_invoice_history_frg" >
+        <argument
+            android:name="customer"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.Customer" />
+    </fragment>
+    <fragment
+        android:id="@+id/holdedInvoicesFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.HoldedInvoicesFrg"
+        android:label="HoldedInvoicesFrg" >
+        <action
+            android:id="@+id/action_holdedInvoicesFrg_to_makeInvoiceActivity"
+            app:destination="@id/makeInvoiceActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+
+</navigation>

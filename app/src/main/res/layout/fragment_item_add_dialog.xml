@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.centuryprogrammer18thwasentsingleland.manager.ItemAddDialogFragmentViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etItemName"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/name"
+            android:inputType="textPersonName|textEmailAddress"
+            android:maxLength="20"
+            android:text="@={viewModel.etName}"
+            android:textSize="36sp" />
+
+        <EditText
+            android:id="@+id/etItemNumPiece"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/num_pieces"
+            android:inputType="number"
+            android:maxLength="2"
+            android:text="@={viewModel.etNumPiece}"
+            android:textSize="36sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnItemAddCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:onClick="@{()-> viewModel.onClickBtnItemAddCancel()}"
+                android:text="@string/cancel"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btnItemAddOk"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:onClick="@{()-> viewModel.onClickBtnItemAddOk()}"
+                android:text="add"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

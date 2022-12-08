@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.centuryprogrammer18thwasentsingleland.drop_pickup.MakeInvoiceActVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etTagDialogMakeInvoice"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/tag"
+                android:inputType="text"
+                android:maxLength="30"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/spnTagColorsTagDialogMakeInvoice"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                android:textSize="24sp"
+                android:onClick="@{()-> viewModel.onClickCancelTagDialog(etTagDialogMakeInvoice,spnTagColorsTagDialogMakeInvoice)}"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:text="@string/enter"
+                android:textSize="24sp"
+                android:onClick="@{()-> viewModel.onClickEnterBtnTagAlert(etTagDialogMakeInvoice,spnTagColorsTagDialogMakeInvoice)}"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

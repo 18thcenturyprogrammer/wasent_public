@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/manager_firebase_login_nav"
+    app:startDestination="@id/managerFirebaseLoginFrg">
+
+    <fragment
+        android:id="@+id/managerFirebaseLoginFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.login.ManagerFirebaseLoginFrg"
+        android:label="ManagerFirebaseLoginFrg" >
+        <action
+            android:id="@+id/action_managerFirebaseLoginFrg_to_managerFirebaseSignupFrg"
+            app:destination="@id/managerFirebaseSignupFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_managerFirebaseLoginFrg_to_initSettingFrg"
+            app:destination="@id/initSettingFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/managerFirebaseSignupFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.login.ManagerFirebaseSignupFrg"
+        android:label="ManagerFirebaseSignupFrg" >
+        <action
+            android:id="@+id/action_managerFirebaseSignupFrg_to_initSettingFrg"
+            app:destination="@id/initSettingFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/initSettingFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.login.InitSettingFrg"
+        android:label="InitSettingFrg" />
+</navigation>

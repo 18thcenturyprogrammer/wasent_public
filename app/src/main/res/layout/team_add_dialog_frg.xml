@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.centuryprogrammer18thwasentsingleland.manager.team.TeamAddDialogFrgVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".manager.team.TeamAddDialogFrg">
+
+
+        <EditText
+            android:id="@+id/etIdTeamAddDialogFrg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/enter_team_id"
+            android:inputType="textPersonName"
+            android:text="@={viewModel.teamId}"/>
+
+        <EditText
+            android:id="@+id/etPassTeamAddDialogFrg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword"
+            android:text="@={viewModel.teamPass}"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancelTeamAddDialogFrg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                android:onClick="@{()->viewModel.onClickCancelBtn()}"/>
+
+            <Button
+                android:id="@+id/btnOkTeamAddDialogFrg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:text="@string/add"
+                android:onClick="@{()->viewModel.onClickOkBtn()}" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

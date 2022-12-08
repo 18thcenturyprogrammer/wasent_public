@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.centuryprogrammer18thwasentsingleland.drop_pickup.BaseItemMakeInvoiceFrgVM" />
+
+        <variable
+            name="frg"
+            type="com.centuryprogrammer18thwasentsingleland.drop_pickup.BaseItemMakeInvoiceFrg" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/rbtngBaseItemMakeInvoice"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:checkedButton="@id/rbtDrycleanBaseItemMakeInvoice"
+                android:soundEffectsEnabled="false">
+
+                <RadioButton
+                    android:id="@+id/rbtDrycleanBaseItemMakeInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/dryclean"
+                    android:textSize="10sp" />
+
+                <RadioButton
+                    android:id="@+id/rbtWetcleanBaseItemMakeInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/wetclean"
+                    android:textSize="10sp" />
+
+                <RadioButton
+                    android:id="@+id/rbtAOBaseItemMakeInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/alteration_only"
+                    android:textSize="10sp" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rbtngPartialBaseItemMakeInvoice"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+                <RadioButton
+                    android:id="@+id/rbtnCOPartialBaseItemMakeInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/clean_only"
+                    android:textSize="10sp" />
+
+                <RadioButton
+                    android:id="@+id/rbtnPOPartialBaseItemMakeInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/press_only"
+                    android:textSize="10sp" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBaseItemMakeInvoice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="6">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{()-> frg.onClickTempAdd()}"
+                android:text="@string/temp_item" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/add_item"
+                android:onClick="@{()->frg.onClickAddItem()}"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

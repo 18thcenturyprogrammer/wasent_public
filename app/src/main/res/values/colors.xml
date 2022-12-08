@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    #F2D022 밝은 노랑-->
+<!--    #F2BD1D 노랑-->
+<!--    #BC6D11 짙은갈색-->
+<!--    #D9C179 카키와 노랑 중간-->
+<!--    #BFBFBF 카키-->
+
+
+<resources>
+<!--    <color name="colorPrimary">#6200EE</color>-->
+<!--    <color name="colorPrimaryDark">#3700B3</color>-->
+<!--    <color name="colorAccent">#03DAC5</color>-->
+
+
+    <color name="colorAccent">#000000</color>
+    <color name="colorPrimaryDark">#BC6D11</color>
+    <color name="colorPrimary">#F2BD1D</color>
+    <color name="colorSecondary">#F2D022</color>
+    <color name="colorThird">#FAE579</color>
+    <color name="colorWarning">#FB7913</color>
+    <color name="colorDanger">#F83D3D</color>
+
+
+<!--    <color name="colorAccent">#000000</color>-->
+<!--    <color name="colorPrimaryDark">#BC6D11</color>-->
+<!--    <color name="colorPrimary">#009688</color>-->
+<!--    <color name="colorSecondary">#F2D022</color>-->
+<!--    <color name="colorThird">#FAE579</color>-->
+<!--    <color name="colorWarning">#FB7913</color>-->
+<!--    <color name="colorDanger">#F83D3D</color>-->
+
+</resources>

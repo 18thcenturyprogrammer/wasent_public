@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--  this genstar machine has two usb devices, and /dev/bus/usb/002/005 is printer ,vendor-id="4070" product-id="33054" -->
+<!--    <usb-device vendor-id="8746" product-id="1"/>-->
+    <usb-device vendor-id="4070" product-id="33054"/>
+
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/items_prices_navigation"
+    app:startDestination="@id/itemDashboardFragment">
+
+    <fragment
+        android:id="@+id/itemDashboardFragment"
+        android:name="com.centuryprogrammer18thwasentsingleland.manager.ItemDashboardFragment"
+        android:label="ItemDashboardFragment" >
+        <action
+            android:id="@+id/action_itemDashboardFragment_to_itemFragment"
+            app:destination="@id/itemFragment" />
+        <action
+            android:id="@+id/action_itemDashboardFragment_to_baseItemFragment"
+            app:destination="@id/baseItemFragment" />
+        <action
+            android:id="@+id/action_itemDashboardFragment_to_partialBaseItemFragment"
+            app:destination="@id/partialBaseItemFragment" />
+        <action
+            android:id="@+id/action_itemDashboardFragment_to_detailItemFrg"
+            app:destination="@id/detailItemFrg" />
+        <action
+            android:id="@+id/action_itemDashboardFragment_to_detailBaseItemFrg"
+            app:destination="@id/detailBaseItemFrg" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.centuryprogrammer18thwasentsingleland.manager.ItemFragment"
+        android:label="ItemFragment" >
+        <action
+            android:id="@+id/action_itemFragment_to_itemAddDialogFragment"
+            app:destination="@id/itemAddDialogFragment" />
+        <action
+            android:id="@+id/action_itemFragment_to_itemRemoveDialogFragment"
+            app:destination="@id/itemRemoveDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/itemAddDialogFragment"
+        android:name="com.centuryprogrammer18thwasentsingleland.manager.ItemAddDialogFragment"
+        android:label="ItemAddDialogFragment" />
+    <dialog
+        android:id="@+id/itemRemoveDialogFragment"
+        android:name="com.centuryprogrammer18thwasentsingleland.manager.ItemRemoveDialogFragment"
+        android:label="ItemRemoveDialogFragment" >
+        <argument
+            android:name="ItemName"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/baseItemFragment"
+        android:name="com.centuryprogrammer18thwasentsingleland.manager.BaseItemFragment"
+        android:label="BaseItemFragment" />
+    <fragment
+        android:id="@+id/partialBaseItemFragment"
+        android:name="com.centuryprogrammer18thwasentsingleland.manager.PartialBaseItemFragment"
+        android:label="PartialBaseItemFragment" />
+    <fragment
+        android:id="@+id/detailItemFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.manager.DetailItemFrg"
+        android:label="DetailItemFrg" >
+        <action
+            android:id="@+id/action_detailItemFrg_to_detailItemAddDialogFrg"
+            app:destination="@id/detailItemAddDialogFrg" />
+        <action
+            android:id="@+id/action_detailItemFrg_to_detailItemRemoveFrg"
+            app:destination="@id/detailItemRemoveFrg" />
+    </fragment>
+    <dialog
+        android:id="@+id/detailItemAddDialogFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.manager.DetailItemAddDialogFrg"
+        android:label="DetailItemAddDialogFrg" />
+    <dialog
+        android:id="@+id/detailItemRemoveFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.manager.DetailItemRemoveFrg"
+        android:label="DetailItemRemoveFrg" >
+        <argument
+            android:name="detailItemName"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/detailBaseItemFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.manager.DetailBaseItemFrg"
+        android:label="DetailBaseItemFrg" >
+        <action
+            android:id="@+id/action_detailBaseItemFrg_to_detailBaseItemEditDialogFrg2"
+            app:destination="@id/detailBaseItemEditDialogFrg" />
+    </fragment>
+    <dialog
+        android:id="@+id/detailBaseItemEditDialogFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.manager.DetailBaseItemEditDialogFrg"
+        android:label="DetailBaseItemEditDialogFrg" >
+        <argument
+            android:name="detailBaseItem"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.DetailBaseItem" />
+        <argument
+            android:name="itemPrice"
+            app:argType="java.lang.Double" />
+        <action
+            android:id="@+id/action_detailBaseItemEditDialogFrg_to_detailBaseItemRemoveDialogFrg"
+            app:destination="@id/detailBaseItemRemoveDialogFrg" />
+    </dialog>
+    <dialog
+        android:id="@+id/detailBaseItemRemoveDialogFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.manager.DetailBaseItemRemoveDialogFrg"
+        android:label="DetailBaseItemRemoveDialogFrg" >
+        <argument
+            android:name="detailBaseItemPushKey"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailBaseItemRemoveDialogFrg_to_detailBaseItemFrg"
+            app:destination="@id/detailBaseItemFrg"
+            app:popUpToInclusive="false" />
+    </dialog>
+</navigation>

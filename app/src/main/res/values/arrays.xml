@@ -1,0 +1,70 @@
+<resources>
+    <string-array name="process">
+        <item>CLEAN PRESS</item>
+        <item>CLEAN ONLY</item>
+        <item>PRESS ONLY</item>
+        <item>ALTERATION ONLY</item>
+    </string-array>
+    <string-array name="process_value">
+        <item>clean_press</item>
+        <item>clean_only</item>
+        <item>press_only</item>
+        <item>alteration_only</item>
+    </string-array>
+
+
+    <string-array name="dashboard_inventory_spinner_items">
+        <item>By Created at, Invoice Id</item>
+        <item>By Customer Name</item>
+        <item>By Rack Location</item>
+    </string-array>
+
+    <string-array name="dashboard_conveyor_spinner_items">
+        <item>By Created at, Invoice Id</item>
+        <item>By Customer Name</item>
+        <item>By Due Date</item>
+        <item>By Picked up at</item>
+    </string-array>
+
+    <string-array name="searching_search_spinner_items">
+        <item>Last Name</item>
+        <item>First Name</item>
+        <item>Invoice Number</item>
+
+<!--    i was trying to include functionality for searching note, but
+        firebase realtime database doesn't support 'where', 'like' searching, so i postponed
+        i think if i break note into words and make node for each word, i am able to search note-->
+<!--        <item>Customer Note</item>-->
+<!--        <item>Drop-off Note</item>-->
+<!--        <item>Invoice Note</item>-->
+    </string-array>
+
+    <string-array name="tag_colors">
+        <item>Blue</item>
+        <item>Gray</item>
+        <item>Green</item>
+        <item>Lavender</item>
+        <item>Orange</item>
+        <item>Pink</item>
+        <item>Red</item>
+        <item>Tan</item>
+        <item>White</item>
+        <item>Yellow</item>
+    </string-array>
+
+
+<!-- SharedPreferences PreferencesAcitivity PreferencesFragment ref) https://youtu.be/M15PEeHXM64-->
+    <!-- sample by android studio -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+</resources>
+
+
+

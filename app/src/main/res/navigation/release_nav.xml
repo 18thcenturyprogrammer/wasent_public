@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/release_nav"
+    app:startDestination="@id/printReleaseFrg">
+
+    <fragment
+        android:id="@+id/printReleaseFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.release.PrintReleaseFrg"
+        android:label="print_release_frg"
+        tools:layout="@layout/print_release_frg" />
+</navigation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/categorized_invoices_nav"
+    app:startDestination="@id/categorizedInvoicesFrg">
+
+    <fragment
+        android:id="@+id/categorizedInvoicesFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.sales.CategorizedInvoicesFrg"
+        android:label="categorized_invoices_frg"
+        tools:layout="@layout/categorized_invoices_frg" >
+        <argument
+            android:name="startDate"
+            app:argType="integer[]" />
+        <argument
+            android:name="endDate"
+            app:argType="integer[]" />
+        <argument
+            android:name="categoryName"
+            app:argType="string" />
+    </fragment>
+</navigation>

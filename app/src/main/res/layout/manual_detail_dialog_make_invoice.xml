@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="act"
+            type="com.centuryprogrammer18thwasentsingleland.drop_pickup.MakeInvoiceActivity" />
+        <variable
+            name="viewModel"
+            type="com.centuryprogrammer18thwasentsingleland.drop_pickup.MakeInvoiceActVM" />
+        <variable
+            name="selectedFabricare"
+            type="com.centuryprogrammer18thwasentsingleland.singletons.SeletedFabricare" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvManualDetailDialog"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancelManualDialogMakeInvoice"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:onClick="@{()-> act.onCancelBtnClickManualDetail()}"
+                android:text="@string/cancel"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnSaveManualDialogMakeInvoice"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:onClick="@{()-> act.onSaveBtnClickManualDetail(selectedFabricare)}"
+                android:text="@string/save"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

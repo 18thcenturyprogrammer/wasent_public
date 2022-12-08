@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".drop_pickup.UserInvoiceHistoryFrg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="act"
+            type="com.centuryprogrammer18thwasentsingleland.sales.SalesAct" />
+        <variable
+            name="viewModel"
+            type="com.centuryprogrammer18thwasentsingleland.sales.SalesActVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvStartDateSalesAct"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvEndDateSalesAct"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!--                 radio button two way data binding ref) https://stackoverflow.com/a/54262153/3151712-->
+                    <RadioGroup
+                        android:id="@+id/rbtngInvoiceOrPickupSalesAct"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:checkedButton="@={viewModel.checkedRadioBtnId}">
+
+                        <com.centuryprogrammer18thwasentsingleland.drop_pickup.pickup.ToggleAbleRadioButton
+                            style="@android:style/Widget.Material.Light.CompoundButton.RadioButton"
+                            android:id="@+id/rbtnInvoiceSalesAct"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/invoice" />
+
+                        <com.centuryprogrammer18thwasentsingleland.drop_pickup.pickup.ToggleAbleRadioButton
+                            style="@android:style/Widget.Material.Light.CompoundButton.RadioButton"
+                            android:id="@+id/rbtnPickupSalesAct"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/picked_up" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnStartDateSalesAct"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:onClick="@{()-> act.onClickStartBtn()}"
+                        android:text="@string/start_date" />
+
+                    <Button
+                        android:id="@+id/btnEndDateSalesAct"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:onClick="@{()-> act.onClickEndBtn()}"
+                        android:text="@string/end_date" />
+
+                    <Button
+                        android:id="@+id/btnSearchSalesAct"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:onClick="@{()-> viewModel.onClickSearchBtn()}"
+                        android:text="@string/search" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnInvoiceSalesSalesAct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:onClick="@{()->act.onInvoiceBtnClicked()}"
+                        android:text="@string/invoices_sales"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnInvoiceListSalesAct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:text="@string/invoice"
+                        android:onClick="@{()->act.onInvoiceListBtnClicked()}"/>
+
+                    <Button
+                        android:id="@+id/btnVoidListSalesAct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:onClick="@{()->act.onVoidedBtnClicked()}"
+                        android:text="@string/voided"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnAdjustListSalesAct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:onClick="@{()->act.onAdjustedBtnClicked()}"
+                        android:text="@string/adjusted"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnDropoffListSalesAct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:onClick="@{()->act.onDropoffsBtnClicked()}"
+                        android:text="@string/dropoff"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnPaymentListSalesAct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:onClick="@{()->act.onPaymentsBtnClicked()}"
+                        android:text="@string/payments"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnPickupSalesSalesAct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:onClick="@{()->act.onPickupBtnClicked()}"
+                        android:text="@string/pickup_sales"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnPickupListSalesAct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:text="@string/pick_up"
+                        android:onClick="@{()->act.onPickupListBtnClicked()}"/>
+
+                    <Button
+                        android:id="@+id/btnPrepaidPaidListSalesAct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:onClick="@{()->act.onPrepaidPaidBtnClicked()}"
+                        android:text="@string/prepaid_paid"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnPrepaidPickupListSalesAct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:onClick="@{()->act.onPrepaidPickupBtnClicked()}"
+                        android:text="@string/prepaid_pickup"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnCreditPickupListSalesAct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:onClick="@{()->act.onCreditPickupBtnClicked()}"
+                        android:text="@string/credit_pickup"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnCreditPaybackListSalesAct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:onClick="@{()->act.onCreditPaybackBtnClicked()}"
+                        android:text="@string/credit_payback"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <fragment
+                android:id="@+id/salesActnavHostfrg"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

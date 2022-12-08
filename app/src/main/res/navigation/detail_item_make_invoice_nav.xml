@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/detail_item_make_invoice_nav"
+    app:startDestination="@id/detailMakeInvoiceFrg">
+
+
+    <fragment
+        android:id="@+id/detailMakeInvoiceFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.DetailMakeInvoiceFrg"
+        android:label="DetailMakeInvoiceFrg" >
+        <action
+            android:id="@+id/action_detailMakeInvoiceFrg_to_detailBaseItemAddDialogFrg"
+            app:destination="@id/detailBaseItemAddDialogFrg" />
+        <action
+            android:id="@+id/action_detailMakeInvoiceFrg_to_detailItemAddDialogFrg2"
+            app:destination="@id/detailItemAddDialogFrg2" />
+    </fragment>
+    <dialog
+        android:id="@+id/detailBaseItemAddDialogFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.DetailBaseItemAddDialogFrg"
+        android:label="DetailBaseItemAddDialogFrg" >
+        <argument
+            android:name="mergedDetailItem"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.MergedDetailItem" />
+    </dialog>
+    <dialog
+        android:id="@+id/detailItemAddDialogFrg2"
+        android:name="com.centuryprogrammer18thwasentsingleland.manager.DetailItemAddDialogFrg"
+        android:label="DetailItemAddDialogFrg" />
+</navigation>

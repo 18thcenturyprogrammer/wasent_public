@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnGoItemFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="@string/see_item"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnGoBaseItemFrg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="@string/see_baseitem"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnGoPartialBaseItemFrg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="@string/see_partial_baseitem"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnGoDetailItemFrg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="@string/see_detailitem"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnGoDetailBaseItemFrg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="@string/see_detail_base_item"
+            android:textSize="30sp" />
+    </LinearLayout>
+</layout>

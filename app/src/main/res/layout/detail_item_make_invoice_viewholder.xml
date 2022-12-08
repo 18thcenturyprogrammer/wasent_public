@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <data>
+        <variable
+            name="mergedDetailItem"
+            type="com.centuryprogrammer18thwasentsingleland.data.MergedDetailItem" />
+        <variable
+            name="actViewModel"
+            type="com.centuryprogrammer18thwasentsingleland.drop_pickup.MakeInvoiceActVM" />
+        <variable
+            name="viewModel"
+            type="com.centuryprogrammer18thwasentsingleland.drop_pickup.DetailMakeInvoiceFrgVM" />
+        <variable
+            name="frg"
+            type="com.centuryprogrammer18thwasentsingleland.drop_pickup.DetailMakeInvoiceFrg" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="@{()-> viewModel.onClickedMergedDetailItem(mergedDetailItem)}"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvNameDetailItemMakeInvoiceVH"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="TextView"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSubChargeDetailItemMakeInvoiceVH"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvTotalDetailItemMakeInvoiceVH"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:gravity="center" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</layout>

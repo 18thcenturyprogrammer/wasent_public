@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/team_login_nav"
+    app:startDestination="@id/teamLoginFrg">
+
+    <fragment
+        android:id="@+id/teamLoginFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.login.TeamLoginFrg"
+        android:label="TeamLoginFrg"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@android:anim/slide_in_left"
+        app:popExitAnim="@android:anim/slide_out_right" />
+</navigation>

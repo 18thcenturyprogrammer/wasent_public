@@ -1,0 +1,67 @@
+<!--SharedPreferences PreferencesAcitivity PreferencesFragment-->
+<!--    ref) https://youtu.be/M15PEeHXM64-->
+
+<!-- android:singleLine android:inputType-->
+<!-- ref) https://stackoverflow.com/a/55461028/3151712-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/cleaner">
+
+        <com.centuryprogrammer18thwasentsingleland.utils.NonEmptySingleLineEditTextPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:key="cleaner_name"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/name"/>
+        <com.centuryprogrammer18thwasentsingleland.utils.NonEmptySingleLineNumEditTextPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:key="cleaner_phone_number"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/phone_number" />
+        <com.centuryprogrammer18thwasentsingleland.utils.NonEmptySingleLineEditTextPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:key="cleaner_street_address"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/street_address" />
+        <com.centuryprogrammer18thwasentsingleland.utils.NonEmptySingleLineEditTextPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:key="cleaner_city"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/city" />
+        <com.centuryprogrammer18thwasentsingleland.utils.NonEmptySingleLineEditTextPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:key="cleaner_state"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/state" />
+        <com.centuryprogrammer18thwasentsingleland.utils.NonEmptySingleLineNumEditTextPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:key="cleaner_zipcode"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/zipcode"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/owner">
+
+
+        <com.centuryprogrammer18thwasentsingleland.utils.NonEmptySingleLineEditTextPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:key="owner_email"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/email" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

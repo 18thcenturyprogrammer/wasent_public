@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvRackLocationDoingRackFrgVH"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvInvoiceIdDoingRackFrgVH"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1.5"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvFirstNameDoingRackFrgVH"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tvLastNameDoingRackFrgVH"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tvPhoneDoingRackFrgVH"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tvDueDoingRackFrgVH"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2sp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

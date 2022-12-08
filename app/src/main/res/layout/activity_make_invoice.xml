@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+        <data>
+            <variable
+                name="viewModel"
+                type="com.centuryprogrammer18thwasentsingleland.drop_pickup.MakeInvoiceActVM" />
+            <variable
+                name="act"
+                type="com.centuryprogrammer18thwasentsingleland.drop_pickup.MakeInvoiceActivity" />
+        </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <!--        programmatically navigation pass parameter ref) https://stackoverflow.com/a/56448153/3151712-->
+            <!--        ref) https://stackoverflow.com/a/54613997/3151712-->
+            <!--        getting basic concept , but don't follow this ref) https://stackoverflow.com/a/53922244/3151712-->
+            <fragment
+                android:id="@+id/toUserMakeInvoiceFrg"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5.5"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvFabricaresMakeInvoiceACT"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="20" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvDryQtyMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tvWetQtyMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tvAlterationQtyMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tvPressQtyMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tvCleanQtyMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/emt1MakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:id="@+id/tvTotalQtyMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSubtotalMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tvDiscountMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tvTaxMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tvEnvMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tvTotalMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tvPrepaidMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tvBalanceMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <ToggleButton
+                        android:id="@+id/tbtnSplitMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="0dp"
+                        android:layout_weight="1"
+                        android:onCheckedChanged="@{(tbtn,isSelected)->viewModel.onChangedSplitToggle(tbtn,isSelected)}"
+                        android:textOff="@string/split"
+                        android:textOn="@string/split"
+                        android:textSize="9sp" />
+
+                    <Button
+                        android:id="@+id/btnUpchargeMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/upcharge"
+                        android:textSize="9sp" />
+
+                    <Button
+                        android:id="@+id/btnManualMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/manual"
+                        android:textSize="9sp" />
+
+                    <Button
+                        android:id="@+id/btnDiscountMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/discount"
+                        android:textSize="9sp" />
+
+                    <Button
+                        android:id="@+id/btnRedoMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="0dp"
+                        android:layout_weight="1"
+                        android:onClick="@{()-> viewModel.onClickRedoBtn(viewModel.selectedFabricare)}"
+                        android:text="@string/redo"
+                        android:textSize="9sp" />
+
+                    <Button
+                        android:id="@+id/btnRemoveDetailMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="0dp"
+                        android:layout_weight="1"
+                        android:onClick="@{()-> viewModel.onClickRemoveDetailBtn()}"
+                        android:text="@string/remove_detail"
+                        android:textSize="9sp" />
+
+                    <Button
+                        android:id="@+id/btnManualDetailMakeInvoiceACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/man_detail"
+                        android:textSize="9sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnRemoveMakeInvoiceACT"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:onClick="@{()-> viewModel.onClickRemoveBtn()}"
+                android:text="@string/remove"
+                android:textSize="12sp" />
+
+
+            <Button
+                android:id="@+id/btnNumPieceMakeInvoiceACT"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="@string/num_pieces"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnItemCommentMakeInvoiceACT"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="@string/item_comment"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnHoldMakeInvoiceACT"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="@string/hold"
+                android:textSize="12sp"
+                android:onClick="@{()->viewModel.onClickHoldBtn()}"/>
+
+            <Button
+                android:id="@+id/btnDoneMakeInvoiceACT"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:onClick="@{()->act.onClickDoneBtn()}"
+                android:text="@string/done"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <fragment
+                android:id="@+id/fragment2"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                app:navGraph="@navigation/base_item_make_invoice_nav" />
+
+            <fragment
+                android:id="@+id/fragment3"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                app:navGraph="@navigation/detail_item_make_invoice_nav" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvColorItemMakeInvoiceACT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mnTeamHome"
+        android:icon="@drawable/home"
+        android:title="@string/home"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/mnTeamSearch"
+        android:icon="@drawable/search"
+        android:title="@string/search"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/mnTeamRack"
+        android:icon="@drawable/rack"
+        android:title="@string/rack"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/mnTeamInventory"
+        android:icon="@drawable/inventory"
+        android:title="@string/settings"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/mnTeamConveyor"
+        android:icon="@drawable/conveyor"
+        android:title="@string/settings"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/mnTeamRelease"
+        android:icon="@drawable/release"
+        android:title="@string/releases"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/mnTeamSignout"
+        android:icon="@drawable/exit"
+        android:title="@string/sign_out"
+        app:showAsAction="always" />
+
+</menu>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".stripe.StripeAccountConnectFrg">
+    <data>
+        <variable
+            name="frg"
+            type="com.centuryprogrammer18thwasentsingleland.stripe.StripeAccountConnectFrg" />
+        <variable
+            name="viewModel"
+            type="com.centuryprogrammer18thwasentsingleland.stripe.StripeAccountConnectFrgVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvMsgStripeAccountConnectFrg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:lineSpacingExtra="10sp"
+            android:text="@string/caution_for_stripe_connect"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lbStripeAccountConnectFrg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/connected_account_id"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvIdStripeAccountConnectFrg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnUpdateStripeAccountConnectFrg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:onClick="@{()->viewModel.onOnClickUpdateStripe()}"
+                android:text="@string/update_stripe_status"
+                android:textSize="20sp"
+                app:icon="@drawable/update"
+                app:iconGravity="textStart" />
+
+            <Button
+                android:id="@+id/btnConnectStripeAccountConnectFrg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="@{()->viewModel.onOnClickStripeConnect()}"
+                android:text="@string/new_stripe"
+                android:textSize="20sp"
+                app:icon="@drawable/credit_card"
+                app:iconGravity="textStart" />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+        <!-- for easy debug
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDebugStripeAccountConnectFrg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnDeleteAcctSharedStripeAccountConnectFrg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:onClick="@{()->frg.onClickDeleteAcctBtn()}"
+                android:text="delete account shared"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btnShowAccountIdStripeAccountConnectFrg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="@{()->frg.onOnClickShowAccountStripeConnect()}"
+                android:text="show account number"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+        -->
+    </LinearLayout>
+
+
+</layout>
+
+

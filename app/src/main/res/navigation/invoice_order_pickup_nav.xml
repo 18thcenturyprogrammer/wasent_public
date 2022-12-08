@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/invoice_pickup_nav"
+    app:startDestination="@id/invoiceOrderPickupFrg">
+
+    <fragment
+        android:id="@+id/invoiceOrderPickupFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.pickup.InvoiceOrderPickupFrg"
+        android:label="InvoiceOrderPickupFrg" >
+        <action
+            android:id="@+id/action_invoiceOrderPickupFrg_to_paymentPickupFrg"
+            app:destination="@id/paymentPickupFrg"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <argument
+            android:name="invoiceWithPayments"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.InvoiceWithPayment[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentPickupFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.pickup.PaymentPickupFrg"
+        android:label="PaymentPickupFrg" >
+        <argument
+            android:name="invoiceWithPayment"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.InvoiceWithPayment" />
+        <argument
+            android:name="invoiceWithPayments"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.InvoiceWithPayment[]" />
+    </fragment>
+</navigation>

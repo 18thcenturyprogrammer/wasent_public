@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_base_item_make_invoice"
+    app:startDestination="@id/baseItemMakeInvoiceFrg">
+
+    <fragment
+        android:id="@+id/baseItemMakeInvoiceFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.BaseItemMakeInvoiceFrg"
+        android:label="BaseItemMakeInvoiceFrg" >
+        <action
+            android:id="@+id/action_baseItemMakeInvoiceFrg_to_itemAddDialogFragment2"
+            app:destination="@id/itemAddDialogFragment2" />
+        <action
+            android:id="@+id/action_baseItemMakeInvoiceFrg_to_fabricareAddDialogFrg"
+            app:destination="@id/fabricareAddDialogFrg" />
+    </fragment>
+    <dialog
+        android:id="@+id/itemAddDialogFragment2"
+        android:name="com.centuryprogrammer18thwasentsingleland.manager.ItemAddDialogFragment"
+        android:label="ItemAddDialogFragment" />
+    <dialog
+        android:id="@+id/fabricareAddDialogFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.FabricareAddDialogFrg"
+        android:label="FabricareAddDialogFrg" />
+</navigation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/add_team_nav"
+    app:startDestination="@id/teamFrg">
+    <fragment
+        android:id="@+id/teamFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.manager.team.TeamFrg"
+        android:label="TeamFrg" >
+        <action
+            android:id="@+id/action_teamFrg_to_teamAddDialogFrg"
+            app:destination="@id/teamAddDialogFrg" />
+    </fragment>
+    <dialog
+        android:id="@+id/teamAddDialogFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.manager.team.TeamAddDialogFrg"
+        android:label="TeamAddDialogFrg" >
+        <action
+            android:id="@+id/action_teamAddDialogFrg_to_teamFrg"
+            app:destination="@id/teamFrg"
+            app:popUpTo="@id/teamFrg"
+            app:popUpToInclusive="true" />
+    </dialog>
+</navigation>

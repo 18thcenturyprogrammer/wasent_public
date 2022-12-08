@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.centuryprogrammer18thwasentsingleland.drop_pickup.MakeInvoiceActVM" />
+        <variable
+            name="colorItem"
+            type="com.centuryprogrammer18thwasentsingleland.data.ColorItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvColorItemMakeInvoiceVM"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="@{()-> viewModel.onClickColorItem(colorItem)}">
+
+            <TextView
+                android:id="@+id/tvNameColorItemMakeInvoiceVM"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="10sp"
+                tools:layout_editor_absoluteX="181dp"
+                tools:layout_editor_absoluteY="215dp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

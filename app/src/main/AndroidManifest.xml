@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.centuryprogrammer18thwasentsingleland">
+
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/wasent_single_land"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".testjacob.AppTriggerFuncAct">
+        </activity>
+        <activity
+            android:name=".stripe.StripeConnectAct"
+            android:windowSoftInputMode="adjustResize">
+
+            <!-- deeplink user will be returned from wasent server -->
+            <!-- ref) https://developer.android.com/training/app-links/deep-linking -->
+            <!-- <intent-filter android:label="@string/filter_view_http_return_from_wasent_"> -->
+
+            <intent-filter android:label="abc">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "https://us-central1-wasent-6c0e1.cloudfunctions.net/wasent_web/return_from_stripe” -->
+                <data
+                    android:host="us-central1-wasent-6c0e1.cloudfunctions.net"
+                    android:pathPrefix="/wasent_web/return_from_stripe"
+                    android:scheme="wasent" />
+                <!-- note that the leading "/" is required for pathPrefix -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.ReSignInAct"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".testjacob.FirebaseLoggedInCheckTest"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".login.ManagerLoginAct"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- To have your application discover a particular USB device -->
+            <!-- ref) https://developer.android.com/guide/topics/connectivity/usb/host -->
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+        <activity
+            android:name=".search.SearchAct"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".release.ReleaseAct" />
+        <activity
+            android:name=".sales.SalesAct"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".inventory.InventoryAct"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".rack.RackAct"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".manager.Settings.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".manager.ItemsPricesActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".drop_pickup.DropPickupActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".drop_pickup.pickup.PickupAct"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".conveyor.ConveyorAct"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".drop_pickup.MakeInvoiceActivity"
+            android:screenOrientation="landscape" />
+    </application>
+
+</manifest>

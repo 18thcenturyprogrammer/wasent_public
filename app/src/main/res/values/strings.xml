@@ -1,0 +1,604 @@
+<resources>
+    <string name="app_name">Wasent</string>
+
+    <!--  title  -->
+    <string name="task_board">Task Board</string>
+    <string name="make_invoice">Make Invoice</string>
+    <string name="authentication">Authentication</string>
+    <string name="manager_login">Manager Login</string>
+    <string name="manager_signup">Manager Signup</string>
+    <string name="team_login">Team Login</string>
+    <string name="initial_settings">Initial settings</string>
+    <string name="holded_invoices">Holded invoices</string>
+    <string name="customer_invoices_history">Customer invoices history</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="phone_number">Phone number</string>
+    <string name="email">Email</string>
+    <string name="street_address">Street address</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="zipcode">Zipcode</string>
+    <string name="shirt">Shirt</string>
+    <string name="shirt_on_hanger_or_box">Shirt on Hanger or Box</string>
+    <string name="starch">Starch</string>
+    <string name="note">Note</string>
+    <string name="add">Add</string>
+    <string name="shirt_on_hanger">Shirt on Hanger</string>
+    <string name="shirt_in_Box">Shirt in Box</string>
+    <string name="no_starch">No starch</string>
+    <string name="light_starch">Light starch</string>
+    <string name="medium_starch">Medium starch</string>
+    <string name="heavy_starch">Heavy starch</string>
+    <string name="notice">Notice</string>
+    <string name="new_customer_validation_notice">First name, Last name and Phone number are required.</string>
+
+    <string name="dropoff">Drop-off</string>
+    <string name="invoice">Invoice</string>
+    <string name="pickup">Pick-up</string>
+    <string name="history">History</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Settings Preferences xml-->
+    <string name="cleaner_name_title">Cleaner name</string>
+    <string name="cleaner">Cleaner</string>
+    <string name="owner">Owner</string>
+
+    <!--    manager option menu-->
+    <string name="settings">Settings</string>
+    <string name="name">Name</string>
+    <string name="sales">Sales</string>
+
+    <!-- NonEmptyEditTextPreference -->
+    <string name="empty_not_allowed">This field need to be filled</string>
+
+
+    <!-- basic_items_fragment -->
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+
+    <!--  add basic item dialog xml  -->
+    <string name="num_pieces">Number of pieces</string>
+    <string name="price">Price</string>
+    <string name="amount">Amount</string>
+    <string name="rate">Rate %</string>
+    <string name="select_rate">Select rate</string>
+
+
+    <!-- AddBasicItemDialogFragment-->
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="add_basic_item">Add basic item</string>
+    <string name="could_you_check">Could you check what you entered ?</string>
+    <string name="failed_to_add_basic_item">Failed to add new Basic item</string>
+
+    <!--  fragment_item_dashboard.xml   -->
+    <string name="see_item">See Item</string>
+    <string name="see_baseitem">See Base Item</string>
+    <string name="see_partial_baseitem">See Partial Base Item</string>
+    <string name="see_detailitem">See Detail Item</string>
+    <string name="see_detail_base_item">See Detail Base Item</string>
+
+    <!-- ItemAddDialogFragment -->
+    <string name="add_item">Add item</string>
+    <string name="add_item_success">Successfully Item added</string>
+
+    <!-- ItemAddDialogFragmentViewModel -->
+    <string name="already_exist_item">Item has already existed</string>
+    <string name="not_allowed_special_chars">. $ # [ ] / characters not allowed</string>
+
+
+    <!--ItemRemoveDialogFragment-->
+    <string name="remove_item">Remove Item</string>
+    <string name="do_you_want_remove_item">Do you want to remove Item ?</string>
+    <string name="successfully_item_deleted">Successfully Item deleted</string>
+    <string name="failed_item_deleted">There was problem while deleting Item</string>
+
+    <!--  baseitem_viewholder.xml  -->
+    <string name="edit">Edit</string>
+
+    <!--  fragment_baseitem.xml  -->
+    <string name="save">Save</string>
+
+    <!--  BaseItemFragment  -->
+    <string name="successfully_saved">Succefully saved</string>
+
+    <!--  frg_base_item_make_invoice.xml  -->
+    <string name="dryclean">Dryclean</string>
+    <string name="wetclean">Wetclean</string>
+    <string name="clean_only">Clean Only</string>
+    <string name="press_only">Press Only</string>
+    <string name="alteration_only">Alteration Only</string>
+    <string name="households">Households</string>
+    <string name="temp_item">Temp item</string>
+
+    <!--  detail_item_frg.xml  -->
+    <string name="add_detail_item">Add detail item</string>
+
+    <!--  detail_item_add_dialog_frg.xml  -->
+    <string name="general">General</string>
+    <string name="alteration">Alteration</string>
+
+
+    <!--  DetailItemAddDialogFrg  -->
+    <string name="failed_to_add_detail_item">Failed to add detail item</string>
+    <string name="add_detail_item_success">Successfully detail item added</string>
+
+    <!--  MakeInvoiceActivity  -->
+    <string name="dry_qty">Dry : %d</string>
+    <string name="wet_qty">Wet : %d</string>
+    <string name="alter_qty">Alter : %d</string>
+    <string name="press_qty">Press : %d</string>
+    <string name="clean_qty">Clean : %d</string>
+    <string name="total">Total: %d</string>
+    <string name="please_enter_discount">Please enter discount</string>
+    <string name="hold">Hold</string>
+
+    <!--  MakeInvoiceActVM.kt  -->
+    <string name="empty_zero_not_allowed">Empty and Zero not allowed for this field</string>
+
+    <!--  DetailBaseItemAddDialogFrgVM  -->
+    <string name="failed_to_add_item">Failed to add item</string>
+
+    <!-- fabricare_add_dialog_frg.xml -->
+    <string name="item_name">Item name</string>
+
+    <!--  FabricareAddDialogFrg.kt  -->
+    <string name="fail_to_add_temp_item">Failed to add Temp item</string>
+
+    <!--  FabricareAddDialogFrgVM.kt  -->
+    <string name="these_are_not_allowed_empty">These fields need to be filled</string>
+
+    <!--  activity_make_invoice.xml  -->
+    <string name="subtotal_dollar">SubTotal: $ %s</string>
+    <string name="discount_dollar">Discount: $ %s</string>
+    <string name="tax_dollar">Tax: $ %s</string>
+    <string name="env_charge_dollar">ENV: $ %s</string>
+    <string name="total_dollar">Total: $ %s</string>
+    <string name="prepaid_dollar">Prepaid: $ %s</string>
+    <string name="balance_dollar">Balance: $ %s</string>
+    <string name="upcharge">Upcharge</string>
+    <string name="manual">Manual</string>
+    <string name="discount">Discount</string>
+    <string name="redo">redo</string>
+    <string name="item_comment">Item Comment</string>
+    <string name="done">Done</string>
+    <string name="remove_detail">- Detail</string>
+    <string name="remove">Remove</string>
+    <string name="man_detail">Man. Detail</string>
+    <string name="split">Split</string>
+    <string name="split_on">Split mode on</string>
+    <string name="split_off">Split mode off</string>
+    <string name="please_enter_upcharge_amount">Please enter upcharge amount</string>
+    <string name="please_change_price_manually">Please change price manually</string>
+    <string name="please_change_detail_price_manually">Please change detail price manually</string>
+    <string name="please_num_piece">Please enter number of pieces</string>
+    <string name="please_rack_location">Please enter rack location</string>
+    <string name="please_comment">Please enter comment</string>
+    <string name="change">Change</string>
+    <string name="num_piece">Num Piece</string>
+
+    <!-- discount_dialog_make_invoice.xml -->
+    <string name="entire">Entire</string>
+
+    <!-- user_make_invoice_frg.xml -->
+    <string name="user_history">User History</string>
+
+    <!--  fragment_start.xml  -->
+    <string name="search">Search</string>
+    <string name="new_customer">New Customer</string>
+    <string name="lastname_phone_invoice">Last name,Phone,Invoice</string>
+    <string name="holded">Holded</string>
+
+    <!--  StartFragmentVM.kt  -->
+    <string name="not_correct_length_of_number">You entered Not correct length of numbers</string>
+    <string name="no_search_result">We don\'t have matched customer</string>
+    <string name="no_search_phone_result">We don\'t have matched Phone number</string>
+    <string name="no_search_invoice_result">We don\'t have matched Invoice number</string>
+
+    <!--  invoice_works_dialog_frg.xml  -->
+    <string name="void_invoice">Void</string>
+    <string name="rack">Rack</string>
+    <string name="reprint">Reprint</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="env">Env</string>
+    <string name="only_tax">Tax</string>
+    <string name="only_total">Total</string>
+
+    <!--  fragment_task_board.xml  -->
+    <string name="edit_customer">Edit Customer</string>
+    <string name="invoice_id">Invoice ID</string>
+    <string name="created_at">Created at</string>
+    <string name="due_date">Due date</string>
+    <string name="qty">Qty</string>
+
+
+    <!--  invoice_order_pickup_frg.xml  -->
+    <string name="select_all_full">All Full paid</string>
+    <string name="deselect_all_full">Deselect All full paid</string>
+
+    <string name="select_all_prepaid">All prepaid</string>
+    <string name="deselect_all_prepaid">Deselect All pre paid</string>
+
+    <!--  act_pickup.xml  -->
+    <string name="cash">Cash</string>
+    <string name="check">Check</string>
+    <string name="card">Card</string>
+    <string name="unpaid_balance">Unpaid Balance</string>
+    <string name="balance">Balance</string>
+    <string name="included">Included</string>
+    <string name="excluded">Excluded</string>
+    <string name="credit_sale">Credit sale</string>
+    <string name="unpaid_balance_past">Unpaid balance past :</string>
+    <string name="credit_sales">Credit sales :</string>
+
+
+    <!--  PickupAct.kt  -->
+    <string name="enter_check_num">Please Enter check number</string>
+    <string name="entered_amount_is_less_than_balance">Entered amount is less than balance due</string>
+    <string name="unpaid_amount_will_be_transfered">Unpaid amount will be transferred to the next order</string>
+    <string name="pickup_process_successfully">Pickup process is done successfully</string>
+    <string name="title_activity_login">LoginAc</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <!--  manager_firebase_login_frg.xml  -->
+    <string name="sign_in">Sign-in</string>
+    <string name="enter_password">Enter password</string>
+    <string name="enter_email">Enter email</string>
+    <string name="create_account">Create Account</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="invalid_input">You input invalid data</string>
+    <string name="sign_in_failed">Sign-in failed</string>
+
+    <!--manager_firebase_signup_frg.xml-->
+    <string name="enter_password_alpha_numeric_symbol">Enter password (alpha numeric,one symbol)</string>
+
+    <!--  ManagerFirebaseSignupFrgVM  -->
+    <string name="email_password_cannot_be_empty">Email, Password cannot be empty</string>
+    <string name="not_correct_email">Not correct email format</string>
+    <string name="password_least_6">Password should be at least 6 characters</string>
+    <string name="password_alpha_numeric_special_character">Password should include alpha numeric and special character</string>
+    <string name="passwords_not_matched">Passwords are not matched each other</string>
+
+
+    <!--  init_setting_frg.xml  -->
+    <string name="cleaner_name">Cleaner Name :</string>
+    <string name="cleaner_phone_nume">Cleaner Phone number :</string>
+    <string name="cleaner_street_address">Cleaner Street address :</string>
+    <string name="cleaner_city">Cleaner City :</string>
+    <string name="cleaner_state">Cleaner State :</string>
+    <string name="cleaner_zip">Cleaner Zip :</string>
+    <string name="manager_id">Manager ID :</string>
+    <string name="manager_pass">Manager Password :</string>
+    <string name="tax">Tax :</string>
+    <string name="env_rate">ENV Rate :</string>
+    <string name="env_amount">ENV Amount :</string>
+    <string name="state_2_chars">State should be two characters</string>
+    <string name="zip_5_chars">Zipcode should be five characters</string>
+    <string name="not_correct_phonenum">Phone number is not correct</string>
+    <string name="manager_id_least_4_chars">Manager ID should be longer than 4 characters</string>
+    <string name="manager_pass_least_4_chars">Manager password should be longer than 4 characters</string>
+    <string name="stripe_account_id">Stripe Account ID :</string>
+
+
+    <!--  initSettingFrg  -->
+    <string name="connect_with_stripe">Connect with Stripe</string>
+    <string name="you_will_go_through_stripe">You will go through Stripe account connecting process</string>
+
+    <!--  InitSettingFrgVM  -->
+    <string name="duplicated_id">Duplicated ID</string>
+    <string name="duplicated_pass">Duplicated Password</string>
+    <string name="stripe_not_connected">Stripe account not connected</string>
+    <string name="problem_init_connect_stripe">Problem with init connection to Stripe</string>
+    <string name="problem_save_into_database">Problem with saving data into database</string>
+
+
+    <!--  TeamLoginFrgVM  -->
+    <string name="team_pass_least_4_chars">Team password should be longer than 4 characters</string>
+
+    <!-- TeamLoginFrg -->
+    <string name="incorrect_password">Incorrect password</string>
+
+    <!--  manager_option_menu.xml  -->
+    <string name="sign_out">Sign out</string>
+    <string name="add_team">Add Team</string>
+    <string name="team">Team</string>
+    <string name="home">Home</string>
+    <string name="items_prices">Items and Prices</string>
+
+
+    <!--  TeamApt.kt  -->
+    <string name="incorrect_input">Incorrect input</string>
+
+    <!--  team_frg.xml  -->
+    <string name="add_team_member">Add Team Member</string>
+
+    <!--  team_add_dialog_frg.xml  -->
+    <string name="enter_team_id">Enter Team ID</string>
+
+    <!-- TeamAddDialogFrgVM -->
+    <string name="all_have_to_be_filled_not_duplicated_more_than_4_chars">All fields have to be filled with not duplicated and include more than 4 characters</string>
+    <string name="successfully_add_team_member">Successfully team member added</string>
+
+    <!--  TeamFrgVM  -->
+    <string name="successfully_delete_team_number">Successfully team member deleted</string>
+    <string name="manager_id_cannot_be_deleted">Manager ID cannot be deleted</string>
+
+    <!--  doing_rack_frg.xml  -->
+    <string name="enter_invoice_id">Enter Invoice ID</string>
+    <string name="enter_rack_location">Enter Rack Location</string>
+
+    <!--  DoingRackFrg.kt  -->
+    <string name="not_found_matched_invoice_id">Not found matched Invoice Id</string>
+    <string name="created_at_colon">Created at: </string>
+    <string name="due_colon">Due: </string>
+
+    <!--  dropoff_frg.xml  -->
+    <string name="two_line_dryclean">Dry\nClean</string>
+    <string name="two_line_wetclean">Wet\nClean</string>
+    <string name="two_line_clean_only">Clean\nOnly</string>
+    <string name="two_line_press_only">Press\nOnly</string>
+    <string name="ext">Ext</string>
+    <string name="alter">Alter</string>
+    <string name="two_line_household">House\nhold</string>
+
+    <!--  Dropoff.kt  -->
+    <string name="drop_off_time">Drop off time</string>
+    <string name="pieces">Pieces</string>
+    <string name="permission_denied">Permission denied</string>
+
+
+    <!--  DropoffFrgVM.kt  -->
+    <string name="drop_off_was_added_successfully">Drop off was added successfully</string>
+    <string name="there_was_problem_to_add_drop_off">There was a problem to add Drop off</string>
+
+    <!--  EditCusomerFrg  -->
+    <string name="you_enter_incorrect_data">You entered incorrect data</string>
+
+    <!--  user_invoice_history_frg.xml  -->
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="three_mons">3 months</string>
+    <string name="six_mons">6 months</string>
+    <string name="picked_up_at">Picked up at</string>
+
+    <!--  UserInvoiceHistoryFrgVM.kt  -->
+    <string name="enter_wrong_date">Entered wrong date</string>
+
+    <!--  invoice_works_dialog_frg_upgraded.xml  -->
+    <string name="created">Created</string>
+    <string name="due">Due</string>
+    <string name="racked">Racked</string>
+    <string name="picked_up">Picked up</string>
+    <string name="voided">Voided</string>
+    <string name="original">Original</string>
+    <string name="at">At</string>
+    <string name="by">By</string>
+    <string name="process">Process</string>
+    <string name="item">Item</string>
+    <string name="details">Details</string>
+    <string name="base">Base</string>
+    <string name="sum">Sum</string>
+
+    <!--  VoidInvoiceDialogFrg.kt  -->
+    <string name="Would_you_like_to_void_invoice">Would you like to void %s invoice ?</string>
+    <string name="invoice_order_is_voided_successfully">Invoice order is voided successfully</string>
+    <string name="there_was_problem">There was a problem</string>
+    <!-- HoldedInvoiceOrderApt.kt -->
+    <string name="holede_at">Holded at :</string>
+
+    <!--  user_history_make_invoice_frg.xml  -->
+    <string name="user_infos">User Infos</string>
+
+    <!--  manager_option_menu.xml  -->
+    <string name="inventory">Inventory</string>
+    <string name="conveyor">Conveyor</string>
+
+    <!--  dashboard_conveyor_frg.xml  -->
+    <string name="apply">Apply</string>
+    <string name="conveyor_location">Conveyor location</string>
+
+    <!--  dashboard_sales_frg.xml  -->
+    <string name="pick_up">Pick-up</string>
+    <string name="prepaid_paid">Prepaid -paid</string>
+    <string name="prepaid_pickup">Prepaid -pickup</string>
+    <string name="credit_pickup">Credit -pickup</string>
+    <string name="credit_payback">Credit -payback</string>
+    <string name="payments">Payments</string>
+    <string name="adjusted">Adjusted</string>
+
+
+    <!--    PaymentPickupFrg -->
+    <string name="fullpaid">Full paid</string>
+    <string name="prepaid">Prepaid</string>
+    <string name="partialpaid">Partial paid</string>
+    <string name="enter_customer_want_to_pay">Please Enter amount that customer want to pay</string>
+    <string name="enter_zero_amount_which_will_be_added_to_next">You enter zero amount, %s will be added to the next</string>
+    <string name="you_can_enter_amount_is_smaller_than_balance">You can enter amount that is smaller than %s</string>
+    <string name="enter_fullamount_partilal_payment_should_be_lessa_than_balance">You can enter full amount. Partial payment should be smaller than %s</string>
+
+    <!--  PickupActVM  -->
+    <string name="payment_should_be_larger_than_balance">Payment should be larger than balance</string>
+
+    <!--  invoice_sales_frg.xml  -->
+    <string name="garment_pieces">Garment pieces</string>
+    <string name="total_invoices">Total invoices</string>
+    <string name="total_sales">Total sales</string>
+    <string name="total_garment_pieces">Total pieces</string>
+
+    <!--  pickup_sales_frg.xml  -->
+    <string name="num_payments">Num payments</string>
+    <string name="prepaid_dash_paid">Prepaid - paid</string>
+    <string name="prepaid_dash_pickup">Prepaid - pickup</string>
+    <string name="credit_dash_sale">Credit - sale</string>
+
+    <!--  categorized_paymenst_frg.xml  -->
+    <string name="invoice_price">Invoice price</string>
+    <string name="paid">Paid</string>
+    <string name="credit">Credit</string>
+    <string name="paid_at">Paid at</string>
+    <string name="processed_by">Processed by</string>
+    <string name="type">Type</string>
+
+    <!--  categorized_invoice_order_viewholder.xml  -->
+    <string name="old_invoice">Old invoice</string>
+
+    <!--  dropoff_sales_frg.xml -->
+    <string name="items">Items</string>
+
+    <!--    categorized_invoices_frg.xml -->
+    <string name="voided_at">Voided At</string>
+    <string name="org_invoice_id">Org invoice ID</string>
+    <string name="adjusted_by">Adjusted by</string>
+
+    <!--  pickup_dialog_frg.xml  -->
+    <string name="received_amount">Received Amount</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="check_num">Check Num</string>
+    <string name="pickup_by">Pick By</string>
+
+    <!--  PickupDialogFrgVM  -->
+    <string name="not_found_matched_pickup">Not found matched Pickup</string>
+
+    <!--  PickDialogFrg  -->
+    <string name="invoice_id_colon">Invoice Id : </string>
+    <string name="dry_colon_dollar">Dry : $</string>
+    <string name="wet_colon_dollar">Wet : $</string>
+    <string name="alter_colon_dollar">Alter : $</string>
+    <string name="subtotal_colon_dollar">SubTotal : $</string>
+    <string name="tax_colon_dollar">Tax : $</string>
+    <string name="env_colon_dollar">Env : $</string>
+    <string name="discount_colon_minus_dollar">Discount : -$</string>
+    <string name="total_colon_dollar">Total : $</string>
+    <string name="prepaid_colon_dollar">Prepaid : $</string>
+    <string name="balance_colon_dollar">Balance : $</string>
+
+    <!--  tag_dialog_make_invoice.xml  -->
+    <string name="enter">Enter</string>
+    <string name="tag">Tag</string>
+
+    <!-- dashboard_inventory_frg.xml -->
+    <string name="print">Print</string>
+
+    <!--  DashboardInventoryFrg  -->
+    <string name="not_yet">Not yet</string>
+
+    <!--   InvoiceSalesFrg  -->
+    <string name="invoices_sales">Invoices Sales</string>
+
+    <!--  PickupSalesFrg.kt  -->
+    <string name="pickup_sales">Pickup Sales</string>
+
+    <!--  CategoriezedPaymnetsFrg.kt  -->
+    <string name="pickup_id">Pickup Id</string>
+
+    <!--  ReleaseAct  -->
+    <string name="releases">Releases</string>
+
+    <!--   print_release_frg.xml -->
+    <string name="suede_and_leather">Suede and leather</string>
+    <string name="curtains_and_draperies">Curtains and draperies</string>
+    <string name="area_rugs">Area Rugs</string>
+    <string name="wetcleaning">Wet Cleaning</string>
+
+
+    <!--  PrintReleaseFrg  -->
+    <string name="suede_and_leather_release">
+        Any Garment, Handbags, Purses,Hats, or Shoes, etc. Suede and leather, because they are made of animal skins, sometimes have natural defects that may not show up prior to cleaning. In addition to normal wear, following are certain conditions that we must bring to your attention;
+        \n\n
+        \n- Certain areas of the animal skin may have weak or thin spots that may chafe during the cleaning process.
+        \n- Previous exposure to moisture and heat may cause the skin to become stiff, tender, or brittle.
+        \n- Some skins, even after dyeing, may still show faded areas.
+        \n- As in other fabrics, we may not be able to remove all stains.
+        \n- Uniform color can not be guaranteed if the skins were not matched evenly at the manufacturer.
+        \n- Heavily soiled linings may be difficult to clean completely.
+        \n\n
+        \nI have read the above and understand that even though you will use the utmost possible care in cleaning my leather and/or suede garment, handbags or purses, hats or shoes, etc., I am aware of the hazards andtherefore release you from all responsibility.
+    </string>
+
+    <string name="curtains_and_draperies_release">
+        Curtains and draperies, while hanging, occasionally develop soft areas due to continued exposure to sunlight, heat, humidity, and air pollution.As a result, in spite on the utmost care given to these items during our cleaning procedure, holes or tears may appear. Some faded areas may not be apparent due to soil coverage. Additional shrinkage may sometimes occur, due to the nature of the fabric, or because they were not preshrunk by the manufacturer. For these reasons, we will clean your draperies and / or curtains providing you agree to the following exceptions;
+        \n\n- Sunfading Loss of color due to non-fast dyes.
+        \n- Tears or holes due to fabric degradationWhile hanging
+        \n- Shrinkage due to improper pre-shrinkage at the manufacturer
+        \nWater stains which may darken or may not come out inthe cleaning process.
+        \n\n
+        I have read the above and understand that even though you will use the utmost possible care in cleaning my curtain/draperies, I am aware of the hazards and therefore release you from all responsibility.
+    </string>
+
+    <string name="area_rugs_release">
+        Stains and discolorations caused by food droppings, animal excretions, and other substances may not be removed. Dyes on the rug may discolor in part or whole, and some color bleeding may occur. When objects are placed on the rug for an extended time, covered areas may result in slightly different color from the rest of the rug. Stains on the trim are often immovable and some trims may break when cleaned. Glued or sewn areas can come out apart, and old rugs may not hold up to the normal cleaning and tear.
+        \n\n
+        I have read the above and understand that even though you will use the utmost possible care in cleaning my area rug, I am aware of the hazards and therefore release you from all responsibility.
+    </string>
+
+    <string name="wetcleaning_release">
+        Occasionally, certain stains or soils cannot be removed in the drycleaning procedure. When this happens the garment should be wetcleaned. During this procedure we use the utmost professional care to insure that there will be no shrinkage, color loss or distortion of the fabric. However,in spite of the precautions that we take, some fabrics still may shrink or distort while others may have been dyed with non-fast colors. Therefore we require your signature for acceptance of responsibility for the above conditions.
+        \n
+    </string>
+
+    <string name="signature">Signature</string>
+    <string name="date">Date</string>
+
+    <!-- exit_dialog_drop_pickup.xml -->
+    <string name="exit">Exit</string>
+    <string name="would_you_like_to_finish">Would you like to finish?</string>
+
+    <!--  pickup_list_sales_frg.xml  -->
+    <string name="real_paid">Real paid</string>
+    <string name="pay_method">Pay method</string>
+
+    <!-- SearchingSearchFrgVM.kt -->
+    <string name="original_id">Original ID</string>
+    <string name="tag_color">Tag Color</string>
+
+    <!--   DetailBaseItemEditDialogFrg -->
+    <string name="edit_detail_item">Edit Detail Item</string>
+
+    <!--  reSignIn  -->
+    <string name="successfully_signed_in">Successfully signed in</string>
+
+    <!--  act_re_sign_in.xml  -->
+    <string name="manager_need_to_signin_again">Session is over. Manager needs to sign-in again. </string>
+
+    <!--  firebase_login_for_stripe_connect_frg.xml  -->
+    <string name="manager_need_to_signin_before_connect_stripe">Manager need to sign-in for best security before connect to Stripe.</string>
+
+    <!--  StripeAccountConnectFrg  -->
+    <string name="stripe_account_connected_successfully">Your Stripe account was connected to our system successfully</string>
+    <string name="reconnect_stripe">Reconnect stripe</string>
+    <string name="please_enter_setting_first">Please enter setting first</string>
+    <string name="connected">connected</string>
+
+<!--  stripe_account_connect_frg.xml -->
+    <string name="update_stripe_status">Update stripe status</string>
+    <string name="new_stripe">New Stripe</string>
+    <string name="connect_stripe">Connect Stripe</string>
+    <string name="connected_account_id">Connected Account ID :</string>
+    <string name="caution_for_stripe_connect">- If you want to use Wasent payment system, you need to create Stripe account and connect to Wasent\n
+        - You can start creating Stripe account with clicking \'NEW STRIPE\' button\n
+        - While creating Stripe account, you will need some infos in handy \n
+        (company type, company legal name, bank routing number, account number , social security number or EIN etc.)\n
+        - After creating Stripe account , you have to be this page again and click \'UPDATE STRIPE STATUS\' to connect Wasent and Stripe\n
+        - If you need supports , contact to 971-222-9576</string>
+
+
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/stripe_connect_nav"
+    app:startDestination="@id/firebaseLoginForStripeConnectFrg">
+
+    <fragment
+        android:id="@+id/firebaseLoginForStripeConnectFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.stripe.FirebaseLoginForStripeConnectFrg"
+        android:label="FirebaseLoginForStripeConnectFrg" >
+        <action
+            android:id="@+id/action_firebaseLoginForStripeConnectFrg_to_stripeAccountConnectFrg"
+            app:destination="@id/stripeAccountConnectFrg" />
+    </fragment>
+    <fragment
+        android:id="@+id/stripeAccountConnectFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.stripe.StripeAccountConnectFrg"
+        android:label="stripe_account_connect_frg"
+        tools:layout="@layout/stripe_account_connect_frg" />
+</navigation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_nav"
+    app:startDestination="@id/searchingSearchFrg">
+
+    <fragment
+        android:id="@+id/searchingSearchFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.search.SearchingSearchFrg"
+        android:label="searching_search_frg"
+        tools:layout="@layout/searching_search_frg" />
+</navigation>

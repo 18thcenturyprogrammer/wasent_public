@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/dropoff_sales_nav"
+    app:startDestination="@id/dropOffSalesFrg">
+
+    <fragment
+        android:id="@+id/dropOffSalesFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.sales.DropOffSalesFrg"
+        android:label="DropOffSalesFrg" >
+        <argument
+            android:name="startDate"
+            app:argType="integer[]" />
+        <argument
+            android:name="endDate"
+            app:argType="integer[]" />
+    </fragment>
+</navigation>

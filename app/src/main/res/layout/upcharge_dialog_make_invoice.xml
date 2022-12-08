@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.centuryprogrammer18thwasentsingleland.drop_pickup.MakeInvoiceActVM" />
+        <variable
+            name="selectedFabricare"
+            type="com.centuryprogrammer18thwasentsingleland.singletons.SeletedFabricare" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etUpchargeDialogMakeInvoice"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="numberSigned|number|text|numberDecimal"
+            android:textSize="36sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancelUpchargeDialogMakeInvoice"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:onClick="@{()-> viewModel.onClickCancelUpchargeDialog(etUpchargeDialogMakeInvoice)}"
+                android:text="@string/cancel"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btnOkUpchargeDialogMakeInvoice"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:onClick="@{()-> viewModel.onClickOkUpchargeDialog(etUpchargeDialogMakeInvoice,selectedFabricare)}"
+                android:text="@string/upcharge"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>
+

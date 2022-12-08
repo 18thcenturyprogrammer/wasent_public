@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.centuryprogrammer18thwasentsingleland.manager.PartialBaseItemFragmentVIewModel" />
+    </data>
+
+    <!-- remove auto setting focus from viewholder  -->
+    <!-- ref) focus auto https://stackoverflow.com/a/59072414/3151712   -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPartialBaseItemFrg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10" >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/btnSavePartialBaseItemFrg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:onClick="@{()-> viewModel.saveAllPartialBaseItemsInFirebase()}"
+            android:text="@string/save" />
+
+    </LinearLayout>
+</layout>

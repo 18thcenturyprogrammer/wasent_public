@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".release.PrintReleaseFrg">
+    <data>
+        <variable
+            name="frg"
+            type="com.centuryprogrammer18thwasentsingleland.release.PrintReleaseFrg" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSuedePrintReleaseFrg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="36dp"
+                android:layout_weight="1"
+                android:text="@string/suede_and_leather"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:onClick="@{(view)-> frg.printing(view)}"/>
+
+            <Button
+                android:id="@+id/btnCurtainPrintReleaseFrg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="36dp"
+                android:layout_weight="1"
+                android:text="@string/curtains_and_draperies"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:onClick="@{(view)-> frg.printing(view)}"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnRugPrintReleaseFrg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="36dp"
+                android:layout_weight="1"
+                android:text="@string/area_rugs"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:onClick="@{(view)-> frg.printing(view)}"/>
+
+            <Button
+                android:id="@+id/btnWetCleaningPrintReleaseFrg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="36dp"
+                android:layout_weight="1"
+                android:text="@string/wetcleaning"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:onClick="@{(view)-> frg.printing(view)}"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

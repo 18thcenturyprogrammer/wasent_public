@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/invoice_works_nav"
+    app:startDestination="@id/invoiceWorksDialogUpgradedFrg">
+
+    <dialog
+        android:id="@+id/invoiceWorksDialogUpgradedFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.invoice_works.InvoiceWorksDialogUpgradedFrg"
+        android:label="InvoiceWorksDialogUpgradedFrg" >
+        <action
+            android:id="@+id/action_invoiceWorksDialogUpgradedFrg_to_rackAct"
+            app:destination="@id/rackAct"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_invoiceWorksDialogUpgradedFrg_to_makeInvoiceActivity"
+            app:destination="@id/makeInvoiceActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_invoiceWorksDialogUpgradedFrg_to_voidInvoiceDialogFrg"
+            app:destination="@id/voidInvoiceDialogFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <argument
+            android:name="customer"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.Customer" />
+        <argument
+            android:name="invoiceOrder"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.InvoiceOrder" />
+    </dialog>
+    <activity
+        android:id="@+id/rackAct"
+        android:name="com.centuryprogrammer18thwasentsingleland.rack.RackAct"
+        android:label="act_rack"
+        tools:layout="@layout/act_rack" />
+    <activity
+        android:id="@+id/makeInvoiceActivity"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.MakeInvoiceActivity"
+        android:label="MakeInvoiceActivity" >
+        <argument
+            android:name="customer"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.Customer" />
+        <argument
+            android:name="invoiceOrder"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.InvoiceOrder"
+            app:nullable="true" />
+    </activity>
+    <dialog
+        android:id="@+id/voidInvoiceDialogFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.invoice_works.VoidInvoiceDialogFrg"
+        android:label="VoidInvoiceDialogFrg" >
+        <argument
+            android:name="customer"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.Customer" />
+        <argument
+            android:name="invoiceOrder"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.InvoiceOrder" />
+    </dialog>
+</navigation>

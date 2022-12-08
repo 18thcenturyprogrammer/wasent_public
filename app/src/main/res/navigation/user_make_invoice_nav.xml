@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_make_invoice_nav"
+    app:startDestination="@id/userMakeInvoiceFrg">
+
+    <fragment
+        android:id="@+id/userMakeInvoiceFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.UserMakeInvoiceFrg"
+        android:label="UserMakeInvoiceFrg" >
+        <action
+            android:id="@+id/action_userMakeInvoiceFrg_to_userHistoryMakeInvoiceFrg"
+            app:destination="@id/userHistoryMakeInvoiceFrg"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="customer"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.Customer" />
+    </fragment>
+    <fragment
+        android:id="@+id/userHistoryMakeInvoiceFrg"
+        android:name="com.centuryprogrammer18thwasentsingleland.drop_pickup.UserHistoryMakeInvoiceFrg"
+        android:label="UserHistoryMakeInvoiceFrg" >
+        <argument
+            android:name="customer"
+            app:argType="com.centuryprogrammer18thwasentsingleland.data.Customer" />
+    </fragment>
+</navigation>
